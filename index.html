@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>MyPortfolio</title>
+    <style>
+    .Home{
+        background-color: #FF71CD;
+        padding:6px;
+        border-radius: 30px;
+    }
+        body{
+            display:flex;
+            height:auto;
+            min-height:100vh;
+            flex-direction:column;
+            /* justify-content:center;
+            align-items:center; */
+            margin:0;
+            padding:0;
+            background-color:aliceblue;
+        }
+        .Navigator{
+        height: auto;
+        min-height: 70px;
+        width: 90%;
+        max-width:1000px;
+        margin-top: 40px;
+        /* height: 10vh; */
+        display:flex;
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        border-radius:50px;
+        /* background-color:#261FB3; */
+        background-color:#7695FF;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        align-self: center;
+        font-weight: bold;
+        color: black;
+        padding: 10px;
+        gap: 10px;    
+        /* align-content: center;*/
+        justify-items: center; 
+       }
+             .Navigator a{
+        text-decoration: none;
+        /* color: darkviolet; */
+        /* color:#FBE4D6; */
+        color:#F6F5F5;
+        padding-top:5px;
+        border-radius: 10px;
+       }
+
+       /* .Navigator a:hover{
+         background-color: rgb(234, 28, 151); 
+        padding:2px; 
+        border-radius: 10px; 
+        padding:5%;   
+       } */
+       .Navigator a:hover { 
+        background-color: rgb(234, 28, 151);
+        border-radius: 10px;
+        padding: 10px 20px;
+        display: inline-block;
+        }
+        
+    /* .Navigator a:hover{
+        transform: scale(1.3);
+        cursor: pointer;
+    } */
+       .ModeButton{
+        display:flex;
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        padding:0;
+        margin:0;
+        align-self: center;
+        justify-content: center;
+       }
+
+       .container{
+        width: 90%;
+        max-width:1000px;
+        height:auto;
+     display:grid;
+     margin-top: 50px;
+     margin-bottom: 30px;
+     /* grid-auto-columns: 1fr 1fr 1fr; */
+     /* grid-auto-rows: 1fr 2fr;  */
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto auto;
+     gap:10px;
+     align-self:center;
+     /* background-color: #f0f1ec; */
+    }
+
+    .container >div{
+        border-radius: 10px;
+    }
+
+    .Greet{
+     background-color: white;
+    grid-column: span 2;
+    border-radius: 10px;
+    min-height:150px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    padding: 20px;
+    /* margin-bottom:0;
+    margin-top:0; */
+    justify-content: center;
+    align-content: center;
+     text-align: center;
+    }
+
+    .ProPic {
+     background-color: white;
+     min-height: 150px;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+    
+    .ProPic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .MyProjects{
+     background-color: white;
+     align-content: center;
+     text-align: center;
+     margin:0;
+     padding:20px 10px;
+     min-height: 150px;
+    }
+
+    .HomeButton{
+        color:white;
+        /* background-color: red; */
+        background-color: #7695FF;
+        height:50px;
+        width:200px;
+        border-radius: 10px;
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        /* align-self: center; */
+    }
+    .HomeButton:hover{
+        background-color: #FF71CD;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    .QucikInfo{
+     background-color: white;
+     grid-column: span 2;
+     align-content: center;
+     text-align: center;
+     font-size: clamp(1.2rem, 3vw, 3rem);
+     padding: 20px;
+    }
+    .footer{
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #7695FF;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: 1000px;
+        width: 90%;
+        align-self: center;
+        gap: 20px;
+    }
+    
+    .footer-center {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    .footer-right {
+        text-align: right;
+        color: #FF71CD;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+    .Navigator {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        border-radius: 30px;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .Greet {
+        grid-column: span 1;
+        min-height: 120px;
+        padding: 15px;
+    }
+    
+    .ProPic {
+        grid-column: span 1;
+        min-height: 200px;
+    }
+    
+    .MyProjects {
+        grid-column: span 1;
+        padding: 15px;
+    }
+    
+    .QucikInfo {
+        grid-column: span 1;
+        padding: 15px;
+    }
+    
+    .HomeButton {
+        width: 90%;
+        max-width: 200px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-right {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Navigator {
+        width: 95%;
+        font-size: 1.3rem;
+    }
+    
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .Greet {
+        grid-column: span 2;
+    }
+    
+    .ProPic {
+        grid-column: span 1;
+    }
+    
+    .MyProjects {
+        grid-column: span 1;
+    }
+    
+    .QucikInfo {
+        grid-column: span 2;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+<div class="Navigator">
+    <div class="logo">SM</div>
+    <div class ="Home"><a href="index.html">Home</a></div>
+    <div class="Skills"><a href="Skills.html">Skills</a></div>
+    <div class="Prj"><a href="Projects.html">Projects</a></div>
+    <div class="AboutMe"><a href="AboutMe.html">About me</a></div>
+    <div class="Theme"><button class="ModeButton">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+    </button></div>
+</div>
+<div class="container">    
+        <div class="Greet"><p style="font-size:clamp(1.5rem, 4vw, 3rem)">Hi Peeps!!<br><b><span style="font-size: clamp(2rem, 5vw, 4rem); color: #5755FE">Welcome to my page</span></b></p></div>
+
+        <div class="ProPic"><img src="./home.jpg" alt="Developer Profile Picture"></div>
+    <div class="MyProjects"><p><b>Explore my e-commerce Project</b><br>A Backend application built with Java Script with <b>AI</b> Feature.</p>
+    <a href="https://github.com/Kammili-Srimanth/ecommerce-user-management" target="_blank" style="text-decoration: none;"><button class="HomeButton">View Projects</button></a>
+    </div> 
+    <div class="QucikInfo">
+        <p style="margin: 0;">
+            <span style="font-size: 2rem; color: #7695FF; font-weight: bold;">Quick Intro</span>
+            <br>
+            <span style="font-size: 1.8rem; color: #FF71CD; font-weight: bold;">Srimanth Kammili</span>
+            <br>
+            <span style="font-size: 1.4rem; color: #2c3e50;">
+                SDE I at Honeywell | Tech Enthusiast | Problem Solver
+            </span>
+        </p>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-left">© 2025 All Rights Reserved</div>
+    <div class="footer-right">Srimanth Kammili</div>
+</div>
+</body>
+</html>

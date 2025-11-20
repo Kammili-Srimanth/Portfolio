@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>MyPortfolio</title>
+    <style>
+    .Prj{
+        background-color: red;
+        padding:6px;
+        border-radius: 30px;
+    }
+        body{
+            display:flex;
+            height:auto;
+            min-height:100vh;
+            flex-direction:column;
+            /* justify-content:center;
+            align-items:center; */
+            margin:0;
+            padding:0;
+            background-color:aliceblue;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./space.PNG');
+            background-size: cover;
+            background-position: center;
+        }
+       
+       .ModeButton{
+        background-color: red;
+        display:flex;
+        height:50px;
+        width:50px;
+        padding:0;
+        margin:0;
+        align-self: center;
+        justify-content: center;
+        border-radius: 50px;
+       }
+
+       .container{
+        width: 90%;
+        max-width:1000px;
+        height:auto;
+     display:grid;
+     margin-top: 50px;
+     margin-bottom: 30px;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: auto auto;
+     gap:10px;
+     align-self:center;
+     /* background-color: #f0f1ec; */
+    }
+
+    /* .container >div{
+        border-radius: 10px;
+    } */
+    .Title{
+     background-color: white;
+     grid-column: span 3;
+    border-radius: 10px;
+    min-height:150px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    padding: 20px;
+    /* margin-bottom:0;
+    margin-top:0; */
+    justify-content: center;
+    align-content: center;
+     text-align: center;
+    }
+    .GoTo{
+    background-color:white;
+    color:black;
+    border-radius: 10px;
+        font-size: 1.2rem;
+        /* font-weight: bold; */
+        text-align: center;
+        padding: 20px;
+        min-height: 150px;
+        }
+        .Button{
+        color:white;
+        background-color: red;
+        height:40px;
+        width: 90%;
+        max-width:220px;
+        border-radius: 10px;
+        padding:0;
+        margin-bottom:10px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .Button2{
+        color:red;
+        background-color: pink;
+        height:40px;
+        width: 90%;
+        max-width:220px;
+        border-radius: 10px;
+        padding:0;
+        margin-bottom:10px;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+.Description{
+    background-color:white;
+    grid-column: span 4;
+    padding:20px;
+    font-family: Roboto, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+.footer{
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: 1000px;
+        width: 90%;
+        align-self: center;
+        gap: 20px;
+    }
+    
+    .footer-center {
+        flex: 1;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    .footer-right {
+        text-align: right;
+        color: #FF71CD;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+   .Navigator{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 10%;
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    gap: 10px;
+   }
+   
+.Navigator a {
+    text-decoration: none !important;
+    font-weight: bold;
+    color: white;
+}
+
+.Navigator a:hover {
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+    .Navigator {
+        font-size: 1.2rem;
+        padding: 15px 5%;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .Title {
+        grid-column: span 1;
+        min-height: 120px;
+        padding: 15px;
+    }
+    
+    .GoTo {
+        grid-column: span 1;
+        padding: 15px;
+    }
+    
+    .Description {
+        grid-column: span 1;
+        padding: 15px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-right {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Navigator {
+        font-size: 1.3rem;
+    }
+    
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .Title {
+        grid-column: span 2;
+    }
+    
+    .GoTo {
+        grid-column: span 1;
+    }
+    
+    .Description {
+        grid-column: span 1;
+    }
+}
+    </style>
+</head>
+
+<body>
+<div class="Navigator">
+    <div class="logo">SM</div>
+    <div class ="Home"><a href="index.html">Home</a></div>
+    <div class="Skills"><a href="Skills.html">Skills</a></div>
+    <div class="Prj"><a href="Projects.html">Projects</a></div>
+    <div class="About me"><a href="AboutMe.html">About me</a></div>
+    <div class="Theme"><button class="ModeButton" style="border-radius:50%;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#DA954B"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#DA954B"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+    </button></div>
+</div>
+<div class="container"> 
+        <div class="Title"><h1 style="font-size:clamp(1.5rem, 4vw, 3rem)">Some of my past works include...</h1></div>   
+        <div class="GoTo"><p>Navigate To my Project</p>
+        <div class="PrjLink"><button class="Button">View Live</button></a>
+        <div class="PrjLink"><a href="https://github.com/Kammili-Srimanth/ecommerce-user-management" target="_blank" style="text-decoration: none;"><button class="Button2">View Repo</button></a></div>
+        </div>
+        </div>
+        <div class="Description"><p>This is the e-commerce Prj which I've Build keeping in mind real time scenarios & Features & simplifying things for customers.<br>
+        This real time WebApplication has been build inorder to have better mode of online shopping experience & exclusive AI Feature.<br>
+        <br></br>This is built for both user & admin, with CRUD APIs using REST service where an user can create his account, store items in cart & buy items. A subscription method introduced & based on that delivery time & charges will be modified, 
+        This is also useful for admin who can create their account and actually add their product with all details like name, quantity, price, description etc.
+        AI Feature is also included where reviews are customized based on user behavior & previous reviews which simply filter out all 100s of reviews & generate the overall product satisfactory in simple sentence.<br><br>
+        This has been build completely using:</p>
+          <div>  <ul> <span style="Font-weight:bold">FrontEnd </span>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div>
+            <ul><span style="Font-weight:bold">BackEnd</span>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>MySqlDB</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-center">© 2025 All Rights Reserved</div>
+    <div class="footer-right">Srimanth Kammili</div>
+</div>
+</body>
+</html>

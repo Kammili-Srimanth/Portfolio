@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>MyPortfolio</title>
+    <style>
+    .AboutMe{
+        background-color: #FF71CD;
+        padding:6px;
+        border-radius: 30px;
+    }
+        body{
+            display:flex;
+            height:auto;
+            min-height:100vh;
+            flex-direction:column;
+            /* justify-content:center;
+            align-items:center; */
+            margin:0;
+            padding:0;
+            background-color:aliceblue;
+        }
+        .Navigator{
+        height: auto;
+        min-height: 70px;
+        width: 90%;
+        max-width:1000px;
+        font-weight: bold;
+        color: white; 
+        margin-top: 40px;
+        /* height: 10vh; */
+        display:flex;
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        border-radius:50px;
+        background-color:#7695FF;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        align-self: center;
+        padding: 10px;
+        gap: 10px;
+        /* align-content: center;
+        justify-items: center; */
+       }
+             .Navigator a{
+        text-decoration: none;
+        color:white;
+       }
+
+       .Navigator a:hover{
+        background-color: red;
+        padding:2px;
+        border-radius: 10px;
+       }
+       
+       .ModeButton{
+        display:flex;
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        padding:0;
+        margin:0;
+        align-self: center;
+        justify-content: center;
+       }
+
+       .container{
+        width: 90%;
+        max-width:1000px;
+        height:auto;
+     display:grid;
+     margin-top: 25px;
+     /* grid-auto-columns: 1fr 1fr 1fr; */
+     /* grid-auto-rows: 1fr 2fr;  */
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto auto;
+     gap:10px;
+     align-self:center;
+     margin-bottom: 30px;
+     /* background-color: #f0f1ec; */
+    }
+
+    .container >div{
+        border-radius: 10px;
+    }
+    .ProPic {
+     background-color: white;
+     min-height: 150px;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+    
+    .ProPic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .Info{
+     background-color: white;
+     grid-column: span 2;
+    border-radius: 10px;
+    min-height:150px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    padding: 20px;
+    /* margin-bottom:0;
+    margin-top:0; */
+    justify-content: center;
+    align-content: center;
+     text-align: center;
+    }
+
+    
+.Background{
+    background-color:white;
+    grid-column: span 3;
+    padding:20px;
+    font-family: Roboto, sans-serif;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.highlight-box {
+    background: linear-gradient(90deg, #7695FF 0%, #FF71CD 100%);
+    padding: 3px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.highlight-text {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #7695FF;
+}
+
+.info-card {
+    background: #f0f4ff;
+    border-left: 5px solid #7695FF;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(118, 149, 255, 0.2);
+}
+
+.accent-pink {
+    color: #FF71CD;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.accent-blue {
+    color: #7695FF;
+    font-weight: bold;
+}
+
+.name-section {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    align-self: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.name-section h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: bold;
+    background: linear-gradient(90deg, #7695FF 0%, #FF71CD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+.name-section p {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #5a7bc9;
+    margin-top: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer{
+        text-align: center;
+        margin-top: 60px;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #7695FF;
+        font-weight: 500;
+        letter-spacing: 1px;
+        background: linear-gradient(90deg, transparent 0%, #f0f4ff 50%, transparent 100%);
+        border-top: 2px solid #e0e7ff;
+    }
+
+/* Responsive Media Queries */
+@media screen and (max-width: 768px) {
+    .Navigator {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        border-radius: 30px;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+        gap: 15px;
+    }
+    
+    .ProPic {
+        grid-column: span 1;
+        min-height: 200px;
+    }
+    
+    .Info {
+        grid-column: span 1;
+        min-height: 120px;
+        padding: 15px;
+    }
+    
+    .Background {
+        padding: 20px 15px;
+    }
+    
+    .highlight-text {
+        font-size: 1.3rem;
+        padding: 10px 15px;
+    }
+    
+    .info-card {
+        padding: 12px 15px;
+        margin: 15px 0;
+    }
+    
+    .info-card p {
+        font-size: 1.1rem !important;
+    }
+    
+    .name-section h1 {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Navigator {
+        width: 95%;
+        font-size: 1.3rem;
+    }
+    
+    .container {
+        width: 95%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+    }
+    
+    .ProPic {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .Info {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .Background {
+        grid-column: span 2;
+    }
+}
+   
+    </style>
+</head>
+
+<body>
+<div class="Navigator">
+    <div class="logo">SM</div>
+    <div class ="Home"><a href="index.html">Home</a></div>
+    <div class="Skills"><a href="Skills.html">Skills</a></div>
+    <div class="Prj"><a href="Projects.html">Projects</a></div>
+    <div class="AboutMe"><a href="AboutMe.html">About me</a></div>
+    <div class="Theme"><button class="ModeButton">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+    </button></div>
+</div>
+
+<div class="name-section">
+    <h1>SRIMANTH KAMMILI</h1>
+    <p>Software Development Engineer - I</p>
+</div>
+
+<div class="container"> 
+         <div class="ProPic"><img src="./about.jpg" alt="Developer Profile Picture"></div> 
+        <div class="Info"><p style="font-size:3rem">"Hi Peeps! Welcome to my journey...</p></div>
+        
+    <div class="Background">
+        <div class="highlight-box">
+            <div class="highlight-text">My Professional Journey</div>
+        </div>
+        
+        <div class="info-card">
+            <p style="font-size: 1.25rem; line-height: 1.9; margin: 0; color: #2c3e50;">
+                I am a <span class="accent-pink">Software Development Engineer - I</span> at <b>Honeywell Inc.</b>, where I have been contributing to innovative solutions for the past <b>three years</b>.
+            </p>
+        </div>
+        
+        <div class="info-card">
+            <p style="font-size: 1.25rem; line-height: 1.9; margin: 0; color: #2c3e50;">
+                I hold a <b>Bachelor's degree in Computer Science & Engineering</b> with specialization in <span class="accent-blue">Networking & Security,</span> My educational foundation was built at <b>Vellore Institute of Technology</b> <b> 2022 </b> which instilled in me a passion for continuous learning and technological excellence.
+            </p>
+        </div>
+        
+        <div class="info-card">
+            <p style="font-size: 1.25rem; line-height: 1.9; margin: 0; color: #2c3e50;">
+                Throughout my career, I have remained committed to expanding my technical expertise through professional development courses and hands-on experience, constantly evolving with the dynamic landscape of software engineering.
+            </p>
+        </div>
+    </div>
+  <div class="footer"><footer>© 2025 All Rights Reserved</footer></div>
+</body>
+</html>
